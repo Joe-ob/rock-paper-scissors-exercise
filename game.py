@@ -21,27 +21,42 @@ print(f"You chose: {user_choice}")
 #options = ['rock,', 'paper', 'scissors']
 
 import random
-computer_choice=["Rock", "Paper", "Scissors"]
-print(f"The computer chose: {random.choice(computer_choice)}")
+foo=['rock', 'paper', 'scissors']
+computer_choice=random.choice(foo)
 
-
-
-exit()
-
-
-
-
-
-
-
-
-
-
-#Naming a Winner
 print("Rock, Paper, Scissors, Shoot!")
 print("-------------------")
-print("Oh, the computer won. It's ok.")
+
+print(f"The computer chose: {computer_choice}")
 print("-------------------")
 
-#Goodbye
-print("Thanks for playing. Please play again!")
+if user_choice == 'rock':
+    if computer_choice == 'rock':
+        print("It's a Tie. Thanks for Playing!")
+    elif computer_choice == 'paper':
+        print("You Lose. Thanks for Playing!")
+    elif computer_choice == 'scissors':
+        print("You Win, Thanks for Playing!")
+elif user_choice == 'paper':
+    if computer_choice == 'paper':
+        print("It's a Tie. Thanks for Playing!")
+    elif computer_choice == 'scissors':
+        print("You Lose. Thanks for Playing!")
+    elif computer_choice == 'rock':
+        print("You Win, Thanks for Playing!")
+elif user_choice == 'scissors':
+    if computer_choice == 'scissors':
+        print("It's a Tie. Thanks for Playing!")
+    elif computer_choice == 'rock':
+        print("You Lose. Thanks for Playing!")
+    elif computer_choice == 'paper':
+        print("You Win, Thanks for Playing!")
+
+else:
+    print("OOPS SOMETHING WENT WRONG")
+
+
+
+
+
+
