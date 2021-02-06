@@ -1,35 +1,37 @@
 # game.py
 
-
-
+#Enter UserName
+User_Name=input("Hello, Please enter a User Name: ")
 
 # introduction
-print("------------------")
-print("Welcome 'player one' to my Rock-Paper-Scissors game...")
-print("-------------------")
+print(f"Welcome {User_Name} to my Rock-Paper-Scissors game...")
+
 
 # Asking user for an Input
-user_choice=input("Please choose either 'rock', 'paper', or 'scissors': ")
+user_choice=input("Please choose either 'rock', 'paper', or 'scissors': ").lower()
 
 
 
-# Repeating selection
-print(f"You chose: {user_choice}")
-
+#Stop the program and check if the user choice is invalid
+options=['rock', 'paper', 'scissors']
+if user_choice not in options:
+    print("OOPS, please choose an exact option and try again")
+    exit ()
 
 #computer makes selection
-#options = ['rock,', 'paper', 'scissors']
-
 import random
-foo=['rock', 'paper', 'scissors']
-computer_choice=random.choice(foo)
+computer_choice=random.choice(options)
 
+# Play the game out, displaying the user and computer choice
 print("Rock, Paper, Scissors, Shoot!")
-print("-------------------")
-
+print(f"You chose: {user_choice}")
 print(f"The computer chose: {computer_choice}")
-print("-------------------")
 
+
+
+
+
+# Name a Winner
 if user_choice == 'rock':
     if computer_choice == 'rock':
         print("It's a Tie. Thanks for Playing!")
@@ -52,6 +54,8 @@ elif user_choice == 'scissors':
     elif computer_choice == 'paper':
         print("You Win, Thanks for Playing!")
 
+
+#Message, If there was an issue
 else:
     print("OOPS SOMETHING WENT WRONG")
 
