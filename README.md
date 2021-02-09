@@ -3,6 +3,7 @@
 When you enter your Terminal, create and activate a local environment for your game using the commands
 
 conda create -n rock-paper-scissors-env python=3.8
+
 conda activate rock-paper-scissors-env
 
 Once you are in your new local environment, install the required functions in the required.txt file. You can do this by entering the command 
