@@ -13,7 +13,11 @@ Once you are in your new local environment, install the required functions in th
 into your command line.
 
 
-Now you are ready to play the game! Enter python game.py into your command line. 
+Now you are ready to play the game! Enter
+
+     python game.py
+
+into your command line. 
 
 If you would like to enter a username, right click on the left column and click "new file". Name the file ".env" and write
 
